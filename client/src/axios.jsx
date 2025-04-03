@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://spice-mania-be-1.onrender.com/api",
+  baseURL: `${process.env.REACT_APP_API_BE_URL}/api`,
   // baseURL: "/api",
 });
 

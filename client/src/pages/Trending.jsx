@@ -30,6 +30,7 @@ const Recipes = () => {
     };
 
     fetchData();
+    console.log("response",recipesData);
   }, []);
 
   // Function to group recipes by category

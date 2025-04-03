@@ -38,8 +38,10 @@ const Recipes = () => {
               setRecipesData(response.data);
               setDupLoad(false);
               resolve(); // Resolve the promise when data is fetched successfully
+              console.log(response.data);
             })
             .catch((error) => {
+              console.log(error);
               reject(error); // Reject the promise if there's an error
             });
         });
@@ -85,6 +87,9 @@ const Recipes = () => {
       (filters.category === "all" || recipe.category === filters.category)
     );
   });
+  if(filteredRecipes.length>0){
+    console.log(filteredRecipes);
+  }
 
   return (
     <>
